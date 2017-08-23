@@ -33,6 +33,22 @@ select.form-control{
 #main :not(button){
 	text-align:left;
 }
+.btns{
+	font-size:15px;
+	width:30%;
+	display:inline-block;
+	margin-left:2%;
+	}
+	.modal-dialog{
+		padding-top: 15%;
+	}
+
+div.modal-header{
+	background-color: #2B29A5;
+	color:white;
+}
+
+
 
 
 

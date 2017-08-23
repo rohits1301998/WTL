@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Interest</title>
+	<style type="text/css">
+		body{
+			text-align:center;
+		}
+		input[type="number"]{
+			width:30%;
+			border-radius: 3px;
+			border:1px solid;
+
+		}
+		#ans{
+			display: none;
+			background-color: #DFF0D8;
+		}
+	</style>
+	<script type="text/javascript">
+		function calSi(){
+			var p=document.getElementById("p").value;
+			var r=document.getElementById("r").value;
+			var n=document.getElementById("n").value;
+			if(p!=""&&r!=""&&n!=""){
+           document.getElementById("ans").innerHTML="The answer is "+(p*r*n)/100.0;
+            document.getElementById("ans").style.display="inline-block";
+        }
+        return false;
+		}
+
+		function reset(){
+			document.getElementById("ans").style.display="none";
+			
+			  
+
+		}
+		
+	</script>
+
+</head>
+<body>
+<h1>Simple Interest Calculator</h1>
+<form onsubmit=" return calSi();">
+<label>P:</label>
+<input type="number" id="p" placeholder="ENTER PRINCIPAL AMOUNT" required>
+<br/>
+<br/>
+<label>R:</label>
+<input type="number" id="r" placeholder="ENTER RATE" REQUIRED>
+<br/>
+<br/>
+<label>N:</label>
+<input type="number" id="n" placeholder="ENTER TIME" REQUIRED>
+<br/>
+<br/>
+<input type="submit" value="Calculate" >
+<input type="reset" value="Reset" onclick="reset();">
+<br/>
+<br/>
+<p id="ans"></p>
+</form>
+</body>
+</html>

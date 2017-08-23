@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prac1</title>
+	<script>
+	function color(){
+		var data=document.getElementsByTagName("td");
+		data=[].slice.call(data,0);
+		var bce=/BCE/;
+		var activity=/CL/;
+	for(var i =0; i<data.length; i++){
+		var bcedata=data[i].innerHTML+"";
+         if(data[i].innerHTML=="SOOAD(MRP)"){
+         	data[i].style.backgroundColor="orange";}
+         	else if(data[i].innerHTML=="MP(VN)")
+         		data[i].style.backgroundColor="green";
+         	else if(data[i].innerHTML=="CN(RT)")
+         		data[i].style.backgroundColor="yellow";
+         	else if(data[i].innerHTML=="OS(AB)"||data[i].innerHTML=="OS(SR)")
+         		data[i].style.backgroundColor="#87CEEB";
+         		else if(bce.test(bcedata))
+         		data[i].style.backgroundColor="PINK";
+         		else if(data[i].innerHTML=="CL"||data[i].innerHTML=="PBL"||data[i].innerHTML=="SL"||activity.test(bcedata))
+         		data[i].style.backgroundColor="grey";
+
+	}
+}
+</script>
+</head>
+<body onload="color();" >
+<table border="1" cellspacing="0">
+<tbody align="center">
+<tr>
+<th>Days/Time</th>
+<th>8:30 AM to 9:30 AM</th>
+<th>9:30 AM to 10:30 AM</th>
+<th>10:30 AM to 11:30 AM</th>
+<th>11:30 AM to 11:45 AM</th>
+<th>11:45 AM to 12:45 AM</th>
+<th>12:45 AM to 1:45 AM</th>
+<th>1:45 AM to 2:30 AM</th>
+<th>2:30 AM to 3:30 AM</th>
+<th>3:30 AM to 4:30 AM</th>
+<th>4:30 AM to 5:30 AM</th>
+<th>5:30 AM to 6:30 AM</th>
+</tr>
+
+
+
+<tr>
+<td>MONDAY</td>
+<td colspan="2">Technology Based Learning<br/>(PP) B1/B2 214<br/>(AP) B3/B4 RT/TB 214</td>
+<td>SOOAD(MRP)</td>
+<td rowspan="5">Short Break</td>
+<td colspan="2">WTL B1/B2 YS/JV 214<br/>SOOAD B3/B4 MRP/HP C301</td>
+<td rowspan="5">Lunch Break</td>
+<td>OS(SR)</td>
+<td colspan="2">CN B1/B2 RT/PJ 214<br/>MP B3/B4 VN/AS 208</td>
+<td>CL</td>
+</tr>
+<td>TUESDAY</td>
+<td>CL</td>
+<td colspan="2">WTL B1/B2 YS/JV 214<br/>CN B3/B4 RT/TB 214</td>
+<td>CN(RT)</td>
+<td>SOOAD(MRP)</td>
+<td>MP(VN)</td>
+<td colspan="2">BCE B1/B2 (NK/BK)</td>
+<td>PBL</td>
+<tr>
+<td>WEDNESDAY</td>
+<td>OS(AB)</td>
+<td>MP(VN)</td>
+<td>CN(RT)</td>
+<td>OS(SR)</td>
+<td>SOOAD(MRP)</td>
+<td>BCE(NK)</td>
+<td colspan="2">SOOAD B1/B2 MRP/AP 215<br/>OS B3/B4 SR/PD 214</td>
+<td>PBL</td>
+</tr>
+<td>THURSDAY</td>
+<td>SL</td>
+<td colspan="2">WTL B3/B4 YS/JV 208<br/>OS B1/B2 AB/TB 215</td>
+<td>MP(VN)</td>
+<td>CN(RT)</td>
+<td>SOOAD(MRP)</td>
+<td>ZERO HOUR</td>
+<td colspan="2">BCE B3(NK)</td>
+<tr>
+<td>FRIDAY</td>
+<td>OS(AB)</td>
+<td colspan="2">WTL B3/B4 YS/SS 208<br/>MP B1/B2 VN/MR 314</td>
+<td>BCE(NK)</td>
+<td>MP(VN)</td>
+<td>CN(RT)</td>
+<td colspan="2">Activity Based Learning</td>
+<td>PBL</td>
+</tr>
+<td>SATURDAY</td>
+<td colspan="6">CL/SL/Consultation Hours/Practice Session</td>
+<tr>
+
+</tr>
+
+
+<tr>
+
+</tr>
+</tbody>
+</table>
+</body>
+</html>

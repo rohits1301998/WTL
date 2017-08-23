@@ -4,18 +4,7 @@ function show(){
 	if(status!=0){
 		return;
 	}
-	box.style.position="fixed";
-	box.style.display="inline-block";
-	box.style.backgroundColor="#F6F6F6";
-	box.style.borderRadius="25px";
-	box.style.top="50%";
-     box.style.left="50%";
-	box.style.width="80%";
-	box.style.transform="translate(-50%,-50%)";
-	box.style.height="auto";
-	box.style.textAlign="center";
-	box.style.zIndex="3";
-	box.style.boxShadow="-1px -1px 6px"
+	
 	document.getElementById('main').style.opacity="0.4";
 	soption();
 }
@@ -28,7 +17,7 @@ function soption(){
     var textnode = document.createTextNode("Add more options");
     newItem.appendChild(textnode);
      document.getElementById('box').insertBefore(newItem,document.getElementById('add-elem'));
-     newItem.classList.add("btn","btn-default");
+     newItem.classList.add("btn","btn-success","btns");
      newItem.setAttribute("onclick","return addOptions();");
      newItem.setAttribute("id","addoption");
      document.getElementById('question').focus();
@@ -100,7 +89,7 @@ function addQuestion(){
 	close.setAttribute("onclick","return removeOptions(this);");
 	block.appendChild(close);
 	var question=document.createElement("p");
-	question.innerHTML=parent.children[1].value;
+	question.innerHTML=parent.children[0].value;
 	block.appendChild(question);
 	for(var i=0;i<options.childElementCount;i++)
 		{
@@ -116,6 +105,7 @@ function addQuestion(){
 		}
 	ogparent.insertBefore(block,document.getElementById('add'));
 	cancel();
+	 $('#myModal').modal('hide');
 }
 
 $(document).ready(function(){
@@ -127,8 +117,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#cancel").click(function(){
-        $("#box").fadeOut("slow");
-              setTimeout(cancel,900);
+              setTimeout(cancel,100);
+             $('#myModal').modal('hide');
                 return false;
 
     });
